@@ -1,0 +1,16 @@
+generated: '2026-10-13'
+method: none
+source:
+- https://zapier.com/apps/zalo/integrations
+- https://n8n.io/integrations/zalo/
+- https://composio.dev/toolkits/zalo
+- https://monid.ai/tools/zalo
+checked:
+- https://composio.dev/toolkits/zalo
+- https://monid.ai/tools/zalo
+- https://n8n.io/integrations/zalo/
+- https://zapier.com/apps/zalo/integrations
+summary: null
+marketplace_apps: []
+edges: []
+templates: []

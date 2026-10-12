@@ -1,23 +1,98 @@
 aid: zalo
+
 name: Zalo
-description: 'Zalo is a company surfaced via the API Evangelist harvest backlog (source: market-gap) and
-  added to the network as a stub for full-pipeline profiling.'
+
+image: https://h5.zdn.vn/static/zalo-site/thumb.jpg
+
+description: Zalo is a Vietnamese messaging platform (VNG Corporation). Zalo For Developers documents
+  the Official Account API, the Zalo Notification Service (ZNS) API for template-based transactional messages,
+  the Social API with OAuth v4 user access tokens, and Zalo Mini App.
+
 url: https://raw.githubusercontent.com/api-evangelist/zalo/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:market-gap
-x-tier: stub
+
+x-tier: enriched
+
 x-tier-reason: harvest
+
 specificationVersion: '0.20'
+
 created: '2026-10-13'
+
 modified: '2026-10-13'
+
 tags:
 - Company
-apis: []
+- Messaging
+- CPaaS
+- Vietnam
+- Notifications
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/zalo-hosts.yml
+- type: Blog
+  url: https://zalo.me/vi/blog
+- type: DomainSecurity
+  url: security/zalo-domain-security.yml
 - type: Website
   url: https://zalo.me
+- type: Documentation
+  url: https://developers.zalo.me/docs
+- type: Portal
+  url: https://developers.zalo.me/
+- type: Authentication
+  url: https://developers.zalo.me/docs/social-api/tham-khao/user-access-token-v4
+
+apis:
+- aid: zalo:official-account-api
+  name: Zalo Official Account API
+  description: Send and manage messages, followers and content for a Zalo Official Account.
+  humanURL: https://developers.zalo.me/docs/official-account/bat-dau/kich-hoat-api
+  baseURL: https://openapi.zalo.me
+  tags:
+  - Messaging
+  properties:
+  - type: Documentation
+    url: https://developers.zalo.me/docs/official-account/bat-dau/kich-hoat-api
+- aid: zalo:zns-api
+  name: Zalo Notification Service (ZNS) API
+  description: Send template-based transactional notification messages to Zalo users by phone number.
+  humanURL: https://developers.zalo.me/docs/zalo-notification-service/bat-dau/gioi-thieu-zalo-notification-service-api
+  baseURL: https://business.openapi.zalo.me
+  tags:
+  - Messaging
+  properties:
+  - type: Documentation
+    url: https://developers.zalo.me/docs/zalo-notification-service/bat-dau/gioi-thieu-zalo-notification-service-api
+- aid: zalo:social-api
+  name: Zalo Social API
+  description: User login and profile access via OAuth v4 user access tokens.
+  humanURL: https://developers.zalo.me/docs/social-api/tham-khao/user-access-token-v4
+  baseURL: https://graph.zalo.me
+  tags:
+  - Messaging
+  properties:
+  - type: Documentation
+    url: https://developers.zalo.me/docs/social-api/tham-khao/user-access-token-v4
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  method: derived
+  generated: '2026-10-13'
+  generator: derive-coverage.py (pre-flight evidence)
+  detail: >-
+    the company publishes no developer documentation host and no machine-readable contract on its own domain
+  evidence:
+  - url: https://zalo.me
+    status: 200
