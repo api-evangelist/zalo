@@ -14,7 +14,7 @@ x-type: company
 
 x-source: harvest:market-gap
 
-x-tier: enriched
+x-tier: profiled
 
 x-tier-reason: harvest
 
@@ -96,3 +96,7 @@ x-coverage:
   evidence:
   - url: https://zalo.me
     status: 200
+x-enrichment:
+  status: enriched
+  pass: local-v5
+  date: '2026-10-13'

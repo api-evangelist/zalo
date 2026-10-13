@@ -98,6 +98,7 @@ hosts:
   - contract-discovery
   - well-known
   types:
+  - Blog
   - Website
   serves: []
   registrable_domain: zalo.me
